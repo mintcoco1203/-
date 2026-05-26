@@ -45,3 +45,7 @@ def keyInput(evt):
             
 
 scene.bind("keydown", keyInput)
+while True : 
+    rate(100)
+    if level == 11:
+        print("다 자랐다!")
