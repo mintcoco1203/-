@@ -1,3 +1,9 @@
+from vpython import *
+my_cylinder = cylinder(pos=vec(0, -2, 0),axis=vec(0, 2, 0),radius=1,color=color.red)
+spout = cylinder(pos=vec(0.5, -1.7, 0),axis=vec(2.7, 1, 0),radius=0.3,color=color.red)
+handle = ring(pos=vec(-0.1, -0.2, 0),axis=vec(0, 0, 1),radius=1.5,thickness=0.2,color=color.red)
+wateringcan= compound( [ my_cylinder, spout ,handle])
+wateringcan.axis = vec(1,-0.8,-0.3)
 boxobj1 = box(pos=vec(-0.7,0,0),size=vec(0.5,0.1,0.5),color=color.green)
 boxobj2 = box(pos=vec(0,0,0),size=vec(0.5,0.1,0.5),color=color.green)
 boxobj3 = box(pos=vec(0.7,0,0),size=vec(0.5,0.1,0.5),color=color.green)
@@ -49,23 +55,3 @@ while True :
     rate(100)
     if level == 11:
         print("다 자랐다!")
-from vpython import *
-my_cylinder = cylinder(
-    pos=vec(0, -2, 0),    
-    axis=vec(0, 2, 0),   
-    radius=1,            
-    color=color.red      
-)
-spout = cylinder(
-    pos=vec(0.5, -1.7, 0),  
-    axis=vec(2.7, 1, 0),        
-    radius=0.3,              
-    color=color.red
-)
-handle = ring(
-    pos=vec(-0.1, -0.2, 0),      
-    axis=vec(0, 0, 1),       
-    radius=1.5,               
-    thickness=0.2,            
-    color=color.red           
-)
