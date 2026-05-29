@@ -1,4 +1,3 @@
-from vpython import *
 my_cylinder = cylinder(pos=vec(0, -2, 0),axis=vec(0, 2, 0),radius=1,color=color.red)
 spout = cylinder(pos=vec(0.5, -1.7, 0),axis=vec(2.7, 1, 0),radius=0.3,color=color.red)
 handle = ring(pos=vec(-0.1, -0.2, 0),axis=vec(0, 0, 1),radius=1.5,thickness=0.2,color=color.red)
