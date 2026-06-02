@@ -20,36 +20,39 @@ boxobj13 = box(pos=vec(-0.5,0,1),size=vec(0.4,0.1,0.4),color=color.green)
 level = 1
 maxLevel = 11
 
-def updateBox():
-    boxobj1.size=vec(0.5, level*1.25, 0.5)
-    boxobj2.size=vec(0.5, level*1.25, 0.5)
-    boxobj3.size=vec(0.5, level*1.25, 0.5)
-    boxobj4.size=vec(0.5, level*1.25,0.5)
-    boxobj5.size=vec(0.4, level*1.26,0.4)
-    boxobj6.size=vec(0.4, level*1.23,0.4)
-    boxobj7.size=vec(0.4, level*1.1,0.4)
-    boxobj8.size=vec(0.4, level*1.22,0.4)
-    boxobj9.size=vec(0.4, level*1.2,0.4)
-    boxobj10.size=vec(0.4, level*1.3,0.4)
-    boxobj11.size=vec(0.4, level*1.05,0.4)
-    boxobj12.size=vec(0.4, level*1.1,0.4)
-    boxobj13.size=vec(0.4, level*1.3,0.4)
-
-def keyInput(evt):
-    global level
-    key = evt.key
-    print("key : ", key )
-    if key == "1":
+while True :
+    rate(3)
+    k = keysdown()
+    if '1' in k:
         if level < maxLevel:
             level += 1
-            updateBox()
-            print("현재 단계:", level )
-    if key ==" ":
-        level=1
-        updateBox()
-            
-
-scene.bind("keydown", keyInput)
+            boxobj1.size=vec(0.5, level*1.25, 0.5)
+            boxobj2.size=vec(0.5, level*1.25, 0.5)
+            boxobj3.size=vec(0.5, level*1.25, 0.5)
+            boxobj4.size=vec(0.5, level*1.25,0.5)
+            boxobj5.size=vec(0.4, level*1.26,0.4)
+            boxobj6.size=vec(0.4, level*1.23,0.4)
+            boxobj7.size=vec(0.4, level*1.1,0.4)
+            boxobj8.size=vec(0.4, level*1.22,0.4)
+            boxobj9.size=vec(0.4, level*1.2,0.4)
+            boxobj10.size=vec(0.4, level*1.3,0.4)
+            boxobj11.size=vec(0.4, level*1.05,0.4)
+            boxobj12.size=vec(0.4, level*1.1,0.4)
+            boxobj13.size=vec(0.4, level*1.3,0.4)
+    if ' ' in k:
+        boxobj1 = box(pos=vec(-0.7,0,0),size=vec(0.4,0.1,0.4))
+        boxobj2 = box(pos=vec(0,0,0),size=vec(0.4,0.1,0.4))
+        boxobj3 = box(pos=vec(0.7,0,0),size=vec(0.4,0.1,0.4))
+        boxobj4 = box(pos=vec(-0.35,0,-0.4),size=vec(0.4,0.1,0.4))
+        boxobj5 = box(pos=vec(0.35,0,-0.5),size=vec(0.4,0.1,0.4))
+        boxobj6 = box(pos=vec(0.4,0,0.5),size=vec(0.4,0.1,0.4))
+        boxobj7 = box(pos=vec(-0.35,0,0.5),size=vec(0.4,0.1,0.4))
+        boxobj8 = box(pos=vec(-0.9,0,0.3),size=vec(0.4,0.1,0.4))
+        boxobj9 = box(pos=vec(0.9,0,0.5),size=vec(0.4,0.1,0.4))
+        boxobj10 = box(pos=vec(1.1,0,0.7),size=vec(0.4,0.1,0.4))
+        boxobj11 = box(pos=vec(-1.1,0,0.8),size=vec(0.4,0.1,0.4))
+        boxobj12 = box(pos=vec(0.5,0,1),size=vec(0.4,0.1,0.4))
+        boxobj13 = box(pos=vec(-0.5,0,1),size=vec(0.4,0.1,0.4))
 while True : 
     rate(100)
     if level == 11:
