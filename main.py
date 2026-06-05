@@ -1,7 +1,10 @@
+Web VPython 3.2
+my_cylinder = cylinder(pos=vec(0, -2, 0),axis=vec(0, 2, 0),radius=1,color=color.red)
+spout = cylinder(pos=vec(0.5, -1.7, 0),axis=vec(2.7, 1, 0),radius=0.3,color=color.red)
 handle = ring(pos=vec(-0.1, -0.2, 0),axis=vec(0, 0, 1),radius=1.5,thickness=0.2,color=color.red)
 wateringcan= compound([ my_cylinder, spout ,handle])
 wateringcan.axis = vec(1,-0.6,0)
-wateringcan.pos = vec(-6,5,0)
+wateringcan.pos = vec(-6,6,0)
 box(size=vec(100,0.01,100),color=color.yellow)
 boxobj1 = box(pos=vec(-0.7,0,0),size=vec(0.4,0.1,0.4),color=color.green)
 boxobj2 = box(pos=vec(0,0,0),size=vec(0.4,0.1,0.4),color=color.green)
@@ -16,7 +19,7 @@ boxobj10 = box(pos=vec(1.1,0,0.7),size=vec(0.4,0.1,0.4),color=color.green)
 boxobj11 = box(pos=vec(-1.1,0,0.8),size=vec(0.4,0.1,0.4),color=color.green)
 boxobj12 = box(pos=vec(0.5,0,1),size=vec(0.4,0.1,0.4),color=color.green)
 boxobj13 = box(pos=vec(-0.5,0,1),size=vec(0.4,0.1,0.4),color=color.green)
-
+plant= compound([boxobj1,boxobj2,boxobj3,boxobj4,boxobj5,boxobj6,boxobj7,boxobj8,boxobj9,boxobj10,boxobj11,boxobj12,boxobj13])
 
 
 
@@ -34,34 +37,12 @@ while True :
         print(state[level])
         if level < maxLevel:
             level += 1
-            boxobj1.size=vec(0.5, level*1.25, 0.5)
-            boxobj2.size=vec(0.5, level*1.25, 0.5)
-            boxobj3.size=vec(0.5, level*1.25, 0.5)
-            boxobj4.size=vec(0.5, level*1.25,0.5)
-            boxobj5.size=vec(0.4, level*1.26,0.4)
-            boxobj6.size=vec(0.4, level*1.23,0.4)
-            boxobj7.size=vec(0.4, level*1.1,0.4)
-            boxobj8.size=vec(0.4, level*1.22,0.4)
-            boxobj9.size=vec(0.4, level*1.2,0.4)
-            boxobj10.size=vec(0.4, level*1.3,0.4)
-            boxobj11.size=vec(0.4, level*1.05,0.4)
-            boxobj12.size=vec(0.4, level*1.1,0.4)
-            boxobj13.size=vec(0.4, level*1.3,0.4)
+            plant.size=vec(2, level*1.25, 2)
             if level == maxLevel:
                 print("다 자랐다!")
+                
     if ' ' in k:
         level=0
-        boxobj1.size = vec(0.4,0.1,0.4)
-        boxobj2.size = vec(0.4,0.1,0.4)
-        boxobj3.size = vec(0.4,0.1,0.4)
-        boxobj4.size = vec(0.4,0.1,0.4)
-        boxobj5.size = vec(0.4,0.1,0.4)
-        boxobj6.size = vec(0.4,0.1,0.4)
-        boxobj7.size = vec(0.4,0.1,0.4)
-        boxobj8.size = vec(0.4,0.1,0.4)
-        boxobj9.size = vec(0.4,0.1,0.4)
-        boxobj10.size = vec(0.4,0.1,0.4)
-        boxobj11.size = vec(0.4,0.1,0.4)
-        boxobj12.size = vec(0.4,0.1,0.4)
-        boxobj13.size = vec(0.4,0.1,0.4)
+        plant.size=vec(2,0.1,2)
         print("초기화")
+        
